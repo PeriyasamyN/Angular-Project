@@ -1,0 +1,14 @@
+<p>employeedetails works!</p>
+<h2>Employee List</h2>
+<!-- <ul *ngFor = "let employee of employees">
+  <div *ngIf = "employee.id == employeeId">
+  <li>{{employee.id}}. {{employee.name}} - {{employee.age}}
+
+  </li>
+</div>
+</ul> -->
+<button (click)= 'selectOverview()'>Overview</button>
+<button (click)= 'selectContact()'>Contact</button>
+
+<router-outlet></router-outlet>
+<p>You choose department id = {{employeeId}}</p>
