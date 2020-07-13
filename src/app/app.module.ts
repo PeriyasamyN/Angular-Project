@@ -15,6 +15,12 @@ import { EmployeeOverviewComponent } from './employee-overview/employee-overview
 import { EmployeeContactComponent } from './employee-contact/employee-contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { env } from 'process';
+import { environment } from 'src/environments/environment';
+
+
 
 
 @NgModule({
@@ -35,6 +41,8 @@ import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.FirebaseConfig),
+    AngularFireDatabaseModule,
     NgBootstrapFormValidationModule.forRoot()
 
   ],
